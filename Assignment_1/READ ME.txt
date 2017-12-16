@@ -1,0 +1,12 @@
+Part 1: Javascript Golf Tournament Leaderboard is implemented in golf.js.
+
+	Event Emitter is used to perform postScore() function.
+
+	Let t be the object of Tournament class: 
+			var t = new Tournament("{JSON: String}");
+
+	* postScore() function needs to be called as:
+			t.play[i].postScore(integer);
+
+	* projectedLeaderboard() function needs to be called as:
+			t.projectedLeaderboard(t.projectScoreByHole.bind(t));
