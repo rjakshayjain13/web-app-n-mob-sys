@@ -1,0 +1,56 @@
+html
+    head
+        title validate
+    body
+    h3 Thank you #{name}
+    p Your Order
+    table(border="2" style="padding: 1in" cellpadding="2")
+        tbody
+            tr
+                td
+                    b Book
+                td
+                    b Quantity
+                td
+                    b Unit Cost
+                td
+                    b Total Cost
+            if flag
+                each sb, i in blist
+                    tr
+                        td(align="left")= sb.name
+                        td(align="right")= qnty
+                        td(align="right") $#{sb.price}
+                        td(align="right") $#{sb.tprice}
+            else
+                tr
+                    td(align="left")= blist.name
+                    td(align="right")= qnty
+                    td(align="right") $#{blist.price}
+                    td(align="right") $#{totalCost}
+    p Total cost is $#{totalCost}
+    p
+    br 
+    | Please enter your Credit Card information:
+    form(action="/confirm" method="post")
+        table(border="0")
+            tbody
+                tr
+                    td Credit Card
+                    td(width="92")
+                        select(name="Creditcard")
+                            option MasterCard
+                            option Visa
+                            option Amex
+                tr
+                    td Card Number
+                    td(width="92")
+                        input(type="text" name="Cardnumber" size="19" maxlength="19" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required)
+                        //- Credit card number input validation, allows 4 groups of 4 numbers with a space between each group
+                tr
+                    td Express Delivery
+                    td(width="92")
+                        input(type="checkbox" name="expressdelivery")
+        input(type="submit" name="Purchase" value="Purchase")
+        br
+        a(href="/landing") LOGOUT

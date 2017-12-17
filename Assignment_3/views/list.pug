@@ -1,0 +1,30 @@
+html
+    head
+        title index
+    body
+    br
+    |Please the following information:
+    form(action = "/purchase" method = "post")
+        table(border='0')
+            tbody
+                tr
+                    td Name:
+                    td #{name}
+                tr
+                    td Quantity
+                    td 
+                        input(type="text" name="Quantity" size="4" maxlength="12")
+                        if invalidQty
+                            | *Please enter the correct number of book(s)
+                tr
+                    td Books
+                    td
+                        select(size="9" name="Books" multiple="multiple")
+                            each book, i in blist
+                                option(value= book.id)= book.name
+                        if noSelection
+                            | *Please select the book(s) you want to purchase
+        br
+        input(type="submit" name="SUBMIT")
+        br
+        a(href="/landing") LOGOUT

@@ -1,0 +1,26 @@
+html
+head
+    title confirm
+body
+    p Purchase Succesful
+    table(border = "0")
+        tbody
+            tr
+                td Customer:
+                td #{name}
+            tr
+                td Card:
+                td #{card}
+            tr
+                td Card number:
+                td #{cardNo}
+            tr
+                td Amount:
+                td $#{amount}
+            tr
+                td Express Delivery:
+                td #{ed}
+    br
+    a(href="/list") BUY MORE BOOKS
+    br
+    a(href="/landing") LOGOUT

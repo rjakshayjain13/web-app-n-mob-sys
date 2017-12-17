@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title Books
+    body
+        h2 All the books in the bookstore!
+        br
+        table(cellpadding = "10")
+            tbody
+            tr
+                th Name
+                th Price
+                th More Info
+            each book, i in blist
+                tr
+                    td= book.name
+                    td $#{book.price}
+                    td
+                        a(href= book.url) Get Info
+        | I want to 
+        a(href = "http://localhost:8080//login.html") purchase something
+        | !

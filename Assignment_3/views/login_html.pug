@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title Bookstore: Login page
+    body
+        h1 Bookstore: Login page
+        if flag
+            p
+                h3 Login failed! Please try again!
+        else
+            br
+        if empty
+            p
+                h3 Username/Password field is empty!
+        else
+            br
+        form(action="login" method="post")
+            table(width="75%")
+                tbody
+                    tr
+                        td Enter you name
+                        td
+                            input(name = "uname" type = "text")
+                    tr
+                        td Enter your password
+                        td
+                            input(name = "pwd" type = "text")
+            p
+                input(name="Submit" value="Login" type="submit")
+                input(name="Reset" value="Reset form" type="reset")
