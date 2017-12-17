@@ -1,6 +1,6 @@
 /*===========================
     SER 421 --- Lab 3
-    Authors - Akshay Jain
+    Author - Akshay Jain
 ===========================*/
 
 // JSON string BooksJSON
