@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Clue SPA</title>
+</head>
+
+<body onload="display()">
+    <script src="lab4.js"></script>
+    <h3>Clue</h3>
+    <p id=roomlist></p>
+    <p>
+        <div id="startd">
+            <FORM>
+                Name:
+                <input type="text" id="name" placeholder="Enter your name here" autofocus="true" />
+                <input type="button" value="Enter" onclick="start();recordBtn();" />
+            </FORM>
+        </div>
+    </p>
+    <p>
+        <FORM id="guessform">
+            <table width="50%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>Guess a Room:</label>
+                        </td>
+                        <td>
+                            <select name="rooms" id="rooms" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Guess a Suspect:</label>
+                        </td>
+                        <td>
+                            <select name="suspects" id="suspects" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Guess a Weapon:</label>
+                        </td>
+                        <td>
+                            <select name="weapons" id="weapons" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" id="guessbutton" value="Guess" onclick="guess()">
+        </FORM>
+    </p>
+    <p id="result"></p>
+    <p id="sh"></p>
+    <p id="sr"></p>
+</body>
+
+</html>
